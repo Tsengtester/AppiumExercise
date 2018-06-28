@@ -1,0 +1,12 @@
+{ 
+    "startBtnOflandingPage": "mi_button_cta",
+    "agreeTermsBtn" : "btn_selection", 
+    "retrieveWalletBtn": "btn_retrieve_wallet", 
+    "keystoreBtn": "keystoreButton",
+    "keystoreTextFiled": "keystore",
+    "confirmBtn": "copyBtn",
+    "confirmPwDialog" : "headerAndTopBackground",
+    "inputPwTextFiled" : "android.widget.EditText",
+    "confirmBtnOfPwDialog" : "confirmBtn",
+    "walletReadyText" : "textWalletReady"
+}

@@ -1,0 +1,14 @@
+[caps]
+platformName = "Android"
+deviceName = "ce051715c96e870402"
+appPackage = "com.isuncloud.tidewallet"
+appActivity = ".landing.LandingActivity"
+automationName = 'UiAutomator2'
+autoGrantPermissions = true
+app = "./Build/tidewalletandroid_2.3.0.2-debug.apk"
+
+
+
+[appium_lib]
+sauce_username = false
+sauce_access_key = false

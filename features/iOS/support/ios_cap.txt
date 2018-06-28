@@ -1,0 +1,6 @@
+[caps]
+platformName = "iOS"
+platformVersion = "11.4"
+deviceName = "iPhone SE"
+automationName = "XCUITest"
+app = "./Build/TideWallet.app"
