@@ -17,6 +17,7 @@ When /^I retrieve wallet$/ do
     $driver.find_element(class: $element_table['inputPwTextFiled']).send_keys("test0003")
     sleep(3)
     $driver.find_element(id: $element_table['confirmBtnOfPwDialog']).click
+    sleep(3)
 end
 
 Then /^I should see Wallet Ready message$/ do 
