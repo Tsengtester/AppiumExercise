@@ -23,3 +23,11 @@ end
 Then /^I should see Wallet Ready message$/ do 
     is_element_displayed("id", $element_table['walletReadyText'])
 end
+
+When /^I skip the PIN Setting$/ do
+    $driver.find_element(id: $element_table['PinSkipBtn']).click
+end
+
+Then /^I should see Set Name Text$/ do
+    is_element_displayed("id", $element_table['SetNameText'])
+end

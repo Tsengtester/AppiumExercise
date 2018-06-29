@@ -1,6 +1,7 @@
 #Cucumber provides a number of hooks which allow us to run blocks at various points in the Cucumber test cycle
 
-Before do 
+#Before do 
+Before("@firstcase") do   
   $driver.start_driver
   elements_file = File.read('./features/lib/android_elements_table.json')
   $element_table = JSON.parse(elements_file)
@@ -16,12 +17,14 @@ Before do
 end
 
 Before do |scenario|
-
+#$driver.launch_app
 end
 
-After do
+After("@last") do 
   # Do something after each scenario.
-  $driver.driver_quit 
+  $driver.remove_app('com.isuncloud.tidewallet')
+  #@driver.pull_file('/storage/emulated/0/Download/ETH')
+  $driver.driver_quit
 end
 
 # After do |scenario|

@@ -8,5 +8,10 @@
     "confirmPwDialog" : "headerAndTopBackground",
     "inputPwTextFiled" : "android.widget.EditText",
     "confirmBtnOfPwDialog" : "confirmBtn",
-    "walletReadyText" : "textWalletReady"
+    "walletReadyText" : "textWalletReady",
+    "PinSkipBtn" : "textWalletPinSkip",
+    "SetNameText" : "titleText",
+    "SetNameConfirmBtn" : "confirmBtn"
+
+
 }
