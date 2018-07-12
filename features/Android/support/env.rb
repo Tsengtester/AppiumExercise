@@ -42,6 +42,7 @@ require 'json'
 # If platform is android or ios create driver instance for mobile browser
 caps = Appium.load_appium_txt file: File.expand_path("../android_cap.txt", __FILE__), verbose: true
 
+
 begin
   $driver = Appium::Driver.new(caps)
 rescue Exception => e

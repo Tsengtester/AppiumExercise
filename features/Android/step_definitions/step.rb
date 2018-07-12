@@ -31,3 +31,21 @@ end
 Then /^I should see Set Name Text$/ do
     is_element_displayed("id", $element_table['SetNameText'])
 end
+  
+When /點選設定錢包名稱^$/do
+    $driver.find_element("id",$element_table['SetNameConfirmBtn']).click
+end
+
+Then /^進入設定錢包頁面$/ do
+    element = $driver.find_element("id",$element_table['title'])
+end
+Then /^輸入新的錢包名稱$/ do 
+    $driver.find_element(id:$element_table['edt_wallet_name']).send_keys(element.Text)
+end
+Then /^點選Confirm後，回到前頁$/ do 
+    $driver.find_element("id",$element_table['WalletNameConfirm']).click
+    
+
+
+
+     

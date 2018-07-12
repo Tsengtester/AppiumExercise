@@ -5,8 +5,9 @@ appPackage = "com.isuncloud.tidewallet"
 appActivity = ".landing.LandingActivity"
 automationName = 'UiAutomator2'
 autoGrantPermissions = true
-app = "./Build/tidewalletandroid_2.3.0.2-debug.apk"
-noReset = true
+app = "./Build/tidewalletandroid_2.3.0.2-debug.apk"  
+
+
 
 
 

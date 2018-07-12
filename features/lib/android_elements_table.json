@@ -9,9 +9,16 @@
     "inputPwTextFiled" : "android.widget.EditText",
     "confirmBtnOfPwDialog" : "confirmBtn",
     "walletReadyText" : "textWalletReady",
+    "SttingPINCodeBtn" : "android.widget.Button",
     "PinSkipBtn" : "textWalletPinSkip",
     "SetNameText" : "titleText",
-    "SetNameConfirmBtn" : "confirmBtn"
+    "SetNameConfirmBtn" : "confirmBtn",
+    "title": "toolbar_title",
+    "WalletNameEdit": "edt_wallet_name",
+    "WalletNameConfirm": "btn_confirm",
+    "AddToken": "addTokenText",
+    "IndexPage":"capitalTitleText"
+
 
 
 }
