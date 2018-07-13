@@ -20,11 +20,13 @@ Before do |scenario|
 #$driver.launch_app
 end
 
-#After do 
+#after do
 After("@last") do 
   # Do something after each scenario.
   #$driver.remove_app('com.isuncloud.tidewallet')
   #@driver.pull_file('/storage/emulated/0/Download/ETH')
+  system '$HOME/Library/Android/sdk/platform-tools/adb shell "rm -r /sdcard/Download/ETH"'
+  $driver.remove_app('com.isuncloud.tidewallet')
   $driver.driver_quit
 end
 
@@ -40,11 +42,11 @@ After do |scenario|
 #   # The +scenario+ argument is optional, but
 #   # if you use it, you can inspect status with
 #   # the #failed?, #passed? and #exception methods.
-    #screenshot = "./FAILED_#{scenario.name.gsub(' ','_').gsub(/[^0-9A-Za-z_]/, '')}.png"
-    #$driver.screenshot(screenshot)
+    screenshot = "./Screenshoot/#{scenario.name}_#{Time.now.strftime("%Y%m%d-%H%M%S")}.png"
+    $driver.screenshot(screenshot) 
     #$driver.save_screenshot './Screenshoot/test.png'
-    encoded_img = $driver.screenshot_as(:base64)
-    embed("data:image/png;base64,#{encoded_img}",'image/sspng')
+    #encoded_img = $driver.screenshot_as(:base64)
+    #embed("data:image/png;base64,#{encoded_img}",'image/sspng')
 
 #if scenario.failed?
 #encoded_img = @browser.driver.screenshot_as(:base64)

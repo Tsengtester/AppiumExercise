@@ -18,12 +18,12 @@ Before do |scenario|
 
 end
 
-After do
+After(:all) do
   # Do something after each scenario.
   $driver.driver_quit 
 end
 
-# After do |scenario|
+#After do |scenario|
 #   # Do something after each scenario.
 #   # The +scenario+ argument is optional, but
 #   # if you use it, you can inspect status with
