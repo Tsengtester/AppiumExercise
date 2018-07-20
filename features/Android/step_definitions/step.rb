@@ -32,19 +32,20 @@ Then /^I should see Set Name Text$/ do
     is_element_displayed("id", $element_table['SetNameText'])
 end
   
-When /點選設定錢包名稱^$/do
-$driver.find_element("id",$element_table['SetNameConfirmBtn']).click
+Given /^I choose to setting the wallet name$/ do
+    $driver.find_element(id: $element_table['SetNameConfirmBtn']).click
+    
 end
 
-Then /^進入設定錢包頁面$/ do
-element = $driver.find_element("id",$element_table['title'])
-end
-Then /^輸入新的錢包名稱$/ do 
-$driver.find_element(id:$element_table['edt_wallet_name']).send_keys(element.Text)
-end
-Then /^點選Confirm後，回到前頁$/ do 
-$driver.find_element("id",$element_table['WalletNameConfirm']).click
-end
+Then(/^the element having (.+) "([^\"]*)" should\s*((?:not)?)\s+have text as "(.*?)"$/) do |type, access_name, present, value |
+    #data="title"
+    #puts data
+    access_name = $element_table[access_name]
+    validate_locator type
+    check_element_text(type, value, access_name, present.empty?)
+  end
+
+
 
 
 

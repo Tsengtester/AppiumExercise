@@ -3,8 +3,8 @@
 #Before do 
 Before("@firstcase") do   
   $driver.start_driver
-  elements_file = File.read('./features/lib/android_elements_table.json')
-  $element_table = JSON.parse(elements_file)
+  #elements_file = File.read('./features/lib/android_elements_table.json')
+  #$element_table = JSON.parse(elements_file)
 
    #keystore_file = File.read('./features/lib/keystore.json')
   keystore_file = File.read('./features/step_definitions/keystore.json')
@@ -43,7 +43,8 @@ After do |scenario|
 #   # if you use it, you can inspect status with
 #   # the #failed?, #passed? and #exception methods.
     screenshot = "./Screenshoot/#{scenario.name}_#{Time.now.strftime("%Y%m%d-%H%M%S")}.png"
-    $driver.screenshot(screenshot) 
+    $driver.screenshot(screenshot)
+    embed(screenshot, 'image/png')
     #$driver.save_screenshot './Screenshoot/test.png'
     #encoded_img = $driver.screenshot_as(:base64)
     #embed("data:image/png;base64,#{encoded_img}",'image/sspng')

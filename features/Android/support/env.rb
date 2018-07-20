@@ -45,6 +45,8 @@ caps = Appium.load_appium_txt file: File.expand_path("../android_cap.txt", __FIL
 
 begin
   $driver = Appium::Driver.new(caps)
+  elements_file = File.read('./features/lib/android_elements_table.json')
+  $element_table = JSON.parse(elements_file)
 rescue Exception => e
   puts e.message
   Process.exit(0)  

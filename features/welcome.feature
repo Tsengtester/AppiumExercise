@@ -6,14 +6,16 @@ Feature: landing page
     When I retrieve wallet
     Then I should see Wallet Ready message
 
-  @last
+  
   Scenario: If user skip Setting Pin,user can see the inside page.
     When I skip the PIN Setting
     Then I should see Set Name Text
+
   
-  Scenario:如果點選設定錢包名稱，可進入設定錢包名稱頁面
-    When 點選設定錢包名稱
-    Then 進入設定錢包頁面
-    Then 輸入新的錢包名稱
-    Then 點選Confirm後，回到前頁
+  @last
+  Scenario: if user select to set the wallet name,user can see the setting page.
+    Given I choose to setting the wallet name 
+    Then the element having id "title" should have text as "Rename Wallet"
+    Then the element having id "WalletNameEdit" should have text as "Unnamed Wallet"
     
+
