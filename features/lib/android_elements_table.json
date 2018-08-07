@@ -2,9 +2,9 @@
     "startBtnOflandingPage": "mi_button_cta",
     "agreeTermsBtn" : "btn_selection", 
     "retrieveWalletBtn": "btn_retrieve_wallet", 
-    "keystoreBtn": "keystoreButton",
-    "keystoreTextFiled": "keystore",
-    "confirmBtn": "copyBtn",
+    "ImportKeystoreBtn" : "keystoreButton",
+    "keystoreTextFiled" : "keystore",
+    "confirmBtn" : "copyBtn",
     "confirmPwDialog" : "headerAndTopBackground",
     "inputPwTextFiled" : "android.widget.EditText",
     "confirmBtnOfPwDialog" : "confirmBtn",
@@ -12,13 +12,31 @@
     "SttingPINCodeBtn" : "android.widget.Button",
     "PinSkipBtn" : "textWalletPinSkip",
     "SetNameText" : "titleText",
-    "SetNameConfirmBtn" : "confirmBtn",
-    "title": "toolbar_title",
-    "WalletNameEdit": "edt_wallet_name",
-    "WalletNameConfirm": "btn_confirm",
-    "AddToken": "addTokenText",
-    "IndexPage":"capitalTitleText"
+    "SetNameSettingBtn" : "confirmBtn",
+    "SetNameLaterBtn" : "//android.widget.Button[1][@text='Later']",
+    "Functiontitle" : "toolbar_title",
+    "WalletNameEdit" : "edt_wallet_name",
+    "WalletNameConfirm" : "btn_confirm",
+    "IndexTitle" : "capitalTitleText",
+    "WalletName" : "name",
+    "WalletIcon" : "walletIcon",
+    "ImportWalletIN" : "navigation_property",
+    "CreateWalletIN" : "navigation_discovery",
+    "ImportMnemonicBtn" : "mnemonicButton",
+    "Mnemonic" : "mnemonic",
+    "SettingNewPassword" : "//android.widget.EditText[@text='8 – 20 alphanumeric & number allowed.']",
+    "RepeatNewPassword" : "//android.widget.EditText[@text='']",
+    "ImportConfirmBtn" : "confirmBtn",
+    "MessageBar" : "snackbar_text",
+    "AddCurrency" : "addTokenText",
+    "AddcurrencyTitle": "titleText",
+    "Back": "//android.widget.RelativeLayout/android.widget.ImageButton",
+    "TWX" : "//android.widget.FrameLayout[4]/android.view.ViewGroup/android.widget.TextView[1]",
+    "TWXSwitch" : "//android.widget.FrameLayout[5]/android.view.ViewGroup/android.widget.Switch",
+    "USXSwitch" : "//android.widget.FrameLayout[4]/android.view.ViewGroup/android.widget.Switch"
 
+
+    
 
 
 }

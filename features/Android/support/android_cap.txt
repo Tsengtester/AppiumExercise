@@ -1,6 +1,6 @@
 [caps]
 platformName = "Android"
-deviceName = "ce051715c96e870402"
+deviceName = "emulator-5554"
 appPackage = "com.isuncloud.tidewallet"
 appActivity = ".landing.LandingActivity"
 automationName = 'UiAutomator2'
