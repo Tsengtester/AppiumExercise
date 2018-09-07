@@ -34,7 +34,7 @@ When /^I skip the PIN Setting$/ do
 end
 
 Then /^I should see Set Name Text$/ do
-    is_element_displayed("id", $element_table['SetNameText'])
+    $driver.find_element(id: $element_table['SetNameText']).displayed?
 end
   
 Given /^I choose to setting the wallet name$/ do
@@ -52,9 +52,26 @@ Given /^I choose to add Token Currency$/ do
     $driver.find_element(id: $element_table['AddCurrency']).click
 end
 
-When /^User Add TWD Currency$/ do
-    $driver.find_element(:xpath, $element_table['TWXSwitch']).click
+When /^User Add TWX Currency$/ do
+    $driver.find_elements(class: $element_table['TWXSwitch'])[1].click
     $driver.find_element(:xpath, $element_table['Back']).click
+end
+
+Given /^I choose to send TWX$/ do
+    $driver.find_element(:xpath, $element_table['TWX']).click
+    sleep(3)
+    $driver.find_element(id: $element_table['Send']).click
+    sleep(3)
+end
+
+When /^User Send TWX$/ do
+    $driver.find_element(id: $element_table['SendAddress']).send_keys("0x417353BF6AB7bdb47461F06E589C22422A2fCA59")
+    sleep(1)
+    $driver.find_element(id: $element_table['SendAmounts']).send_keys("3")
+    sleep(1)
+    $driver.find_element(id: $element_table['SendNextBtn']).click
+    sleep(2)
+    $driver.find_element(id: $element_table['SendConfirmBtn']).click
 end
 
 Given /^I choose to retrieve more wallet$/ do

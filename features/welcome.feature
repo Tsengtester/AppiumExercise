@@ -30,8 +30,16 @@ Feature: landing page
   Scenario: User Add Token Currency
     Given I choose to add Token Currency
     And the element having id "AddcurrencyTitle" should have text as "Add Token Currency"
-    When User Add TWD Currency
+    When User Add TWX Currency
     Then the element having xpath "TWX" should have text as "TWX"
+  
+
+  Scenario: User Send TWX
+    Given I choose to send TWX
+    And the element having id "AddcurrencyTitle" should have text as "Send Coin"
+    When User Send TWX
+    And Check keyStore Password
+    Then the element having xpath "TWXChangeList" should have text as "-3.00 TWX"
 
 
   @last
