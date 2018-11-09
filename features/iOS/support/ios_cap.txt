@@ -1,6 +1,12 @@
 [caps]
 platformName = "iOS"
-platformVersion = "11.4"
-deviceName = "iPhone SE"
+platformVersion = "10.3"
+deviceName = "iPhone 6"
 automationName = "XCUITest"
 app = "./Build/TideWallet.app"
+autoAcceptAlerts = true
+
+
+[appium_lib]
+sauce_username = false
+sauce_access_key = false

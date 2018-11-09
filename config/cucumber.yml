@@ -2,6 +2,5 @@
 ##YAML Template
 ---
 android: PLATFORM='android' -r ./features/Android/step_definitions -r ./features/Android/support -r ./features/Android/ --format html --out results/<%= Time.now.strftime("%Y%m%d-%H%M%S") %>-report.html
-ios: PLATFORM='ios' -r ./features/iOS/step_definitions -r ./features/iOS/support -r ./features/iOS
-
+ios: PLATFORM='ios' -r ./features/iOS/step_definitions -r ./features/iOS/support -r ./features/iOS/  --format html --out results/<%= Time.now.strftime("%Y%m%d-%H%M%S") %>-report.html
 

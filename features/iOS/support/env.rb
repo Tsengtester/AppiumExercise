@@ -39,6 +39,8 @@ require 'rubygems'
 require 'selenium-cucumber'
 require 'json'
 
+
+
 # Store command line arguments
 $platform = ENV['PLATFORM']     
 # If platform is android or ios create driver instance for mobile browser
@@ -49,11 +51,13 @@ else
 end
 
 begin
-  $driver = Appium::Driver.new(caps,true)
-  $driver.start_driver
-  puts $driver
-  puts "-----"
+   $driver = Appium::Driver.new(caps,true)
+   $driver.start_driver
+   puts $driver
+   puts "-----"
 rescue Exception => e
-  puts e.message
-  Process.exit(0)  
+   puts e.message
+   Process.exit(0)  
 end
+
+
